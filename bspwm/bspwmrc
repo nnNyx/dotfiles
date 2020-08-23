@@ -28,5 +28,5 @@ feh --bg-scale ~/Downloads/ice.jpg
 ~/.config/polybar/launch.sh &
 sleep .6
 ~/Downloads/igPY.bin &
-sleep .6
+sleep .5
 mpd
