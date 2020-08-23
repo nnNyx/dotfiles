@@ -1,0 +1,214 @@
+;Bruh memento numero dos
+
+[colors]
+bg = #2F3945
+fg = #d1dadc
+
+;================================================
+
+[bar/left]
+monitor = 
+width = 5%
+height = 27
+offset-x = 0%
+offset-y = 0%
+bottom = false
+fixed-center = false
+line-size = 2
+background = ${colors.bg}
+foreground = ${colors.fg}
+border-size = 1
+border-color = ${colors.bg}
+module-margin-left = 1
+module-margin-right - 0
+font-0 = cherry:size=14;3
+font-1 = Font Awesome 5 Free Solid:size=8;2
+font-2 = Font Awesome 5 Free Regular:size=8;2
+font-3 = Font Awesome 5 Brands:size=8;2
+font-4 = font\-logos:size=10;2
+font-5 = IPAGothic:size=11;2
+cursor-click = pointer
+;tray-detached = true
+;tray-offset-x = -15
+;tray-offset-y = 0
+;tray-transparent = true
+tray-position = none
+;tray-padding-right = 24
+;tray-maxsize = 16
+enable-ipc = true
+
+modules-left = workspaces 
+
+;================================================
+
+[bar/middle]
+monitor = 
+width = 31%
+height = 27
+offset-x = 32%
+offset-y = 0%
+bottom = false
+fixed-center = false
+line-size = 2
+background = ${colors.bg}
+foreground = ${colors.fg}
+border-size = 1
+border-color = ${colors.bg}
+module-margin-left = 1
+module-margin-right - 0
+font-0 = cherry:size=14;3
+font-1 = Font Awesome 5 Free Solid:size=8;2
+font-2 = Font Awesome 5 Free Regular:size=8;2
+font-3 = Font Awesome 5 Brands:size=8;2
+font-4 = font\-logos:size=10;2
+font-5 = IPAGothic:size=11;2
+cursor-click = pointer
+;tray-detached = true
+;tray-offset-x = -16%
+;tray-offset-y = 0
+;tray-transparent = true
+tray-position = none
+;tray-padding = 2
+;tray-maxsize = 16
+enable-ipc = true
+
+modules-left = title
+modules-right = mpd
+
+;================================================
+
+[bar/right]
+monitor = 
+width = 8%
+height = 27
+offset-x = 92%
+offset-y = 0%
+bottom = false
+fixed-center = false
+line-size = 2
+background = ${colors.bg}
+foreground = ${colors.fg}
+border-size = 1
+border-color = ${colors.bg}
+module-margin-left = 1
+module-margin-right - 0
+font-0 = cherry:size=14;3
+font-1 = Font Awesome 5 Free Solid:size=8;2
+font-2 = Font Awesome 5 Free Regular:size=8;2
+font-3 = Font Awesome 5 Brands:size=8;2
+font-4 = font\-logos:size=10;2
+font-5 = IPAGothic:size=11;2
+cursor-click = pointer
+;tray-detached = true
+;tray-offset-x = -16%
+;tray-offset-y = 0
+;tray-transparent = true
+tray-position = none
+;tray-padding = 2
+;tray-maxsize = 16
+enable-ipc = true
+
+modules-right = volume time
+
+;================================================
+
+[module/workspaces]
+type = internal/bspwm
+format = <label-state> <label-mode>
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+index-sort = true
+
+enable-click = true
+reverse-scroll = false
+
+label-empty =
+
+label-urgent = 
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.bg}
+label-urgent-background = ${colors.fg}
+label-urgent-overline = ${colors.bg}
+label-urgent-font = 2
+
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-9 = 10;
+;ws-icon-default = 
+
+[module/title]
+type = internal/xwindow
+label = %title:0:40:...%
+label-color1 = ${colors.fg}
+label-background = ${colors.bg}
+label-padding = 2
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+format-online = <icon-prev> <toggle> <icon-next> <label-song> <label-time>
+format-online-padding = 2
+format-online-foreground = ${colors.fg}
+format-online-background = ${colors.bg}
+label-song-foreground = ${colors.fg}
+label-song-background = ${colors.bg}
+label-song-padding = 2
+label-time-foreground = ${colors.fg}
+label-time-background = ${colors.bg}
+label-time-padding = 1
+
+format-offline = <label-offline>
+label-offline =  offline
+format-offline-padding = 2
+format-offline-foreground = ${colors.fg}
+format-offline-background = ${colors.bg}
+
+bar-progress-width = 35
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 75
+label-song-ellipsis = true
+
+[module/time]
+type = internal/date
+interval = 10
+format-margin = 0
+
+time = "%H:%M"
+
+label =  %time%
+label-foreground = ${colors.fg}
+label-background = ${colors.bg}
+label-padding = 2
+
+[module/volume]
+type = internal/pulseaudio
+
+format-margin = 1
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:4:4%%
+format-volume-foreground = ${colors.fg}
+format-volume-background = ${colors.bg}
+format-volume-padding = 2
+use-ui-max = false
+interval = 5
+
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+
+
+label-muted = ""   
+label-muted-background = ${colors.bg}
+label-muted-foreground = ${colors.fg}
+label-muted-padding = 2
