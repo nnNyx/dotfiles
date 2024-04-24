@@ -43,6 +43,7 @@
      neofetch
      curl
      git
+     parsec-bin
      webcord-vencord
      starship
      librewolf
