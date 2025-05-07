@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export TESSDATA_PREFIX=/usr/share/tessdata # Just in case
+export TESSDATA_PREFIX=/usr/share/tessdata
 
 IMG_PATH="/tmp/ocr_capture.png"
 TXT_PATH="/tmp/ocr_output.txt"
