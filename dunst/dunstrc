@@ -1,0 +1,45 @@
+[global]
+monitor = 0
+offset = (10, 40)
+indicate_hidden = yes
+shrink = no
+transparency = 0
+corner_radius = 12
+frame_width = 2
+frame_color = "#89b4fa"
+separator_color = "frame"
+show_indicators = false
+
+padding = 12
+horizontal_padding = 16
+separator_height = 10
+icon_position = left
+max_icon_size = 64
+markup = full
+font = JetBrainsMono Nerd Font 10
+line_height = 4
+
+alignment = center
+word_wrap = yes
+format = "<b>%s</b>\n%b"
+
+ignore_newline = no
+show_age_threshold = 60
+sort = yes
+idle_threshold = 120
+stack_duplicates = true
+hide_duplicate_count = false
+sticky_history = yes
+history_length = 20
+always_run_script = true
+follow = mouse
+class = Dunst
+
+background = "#1e1e2eCC"
+foreground = "#cdd6f4"
+
+width = 300
+height = (0, 100)
+
+[Discord]
+format = "<b>%s</b>\n%b"
